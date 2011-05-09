@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<block>
+    <name>SBHS Source</name>
+    <key>sbhs_source</key>
+    <category>Single Board Heater System</category>
+    <import>from sbhs import sbhs_source</import>
+    <make>sbhs_source.sbhs_source($samp_rate, $fan_speed, $heater_temp)</make> 
+    <callback>set_sample_rate($samp_rate)</callback>
+    <callback>set_fan_speed($fan_speed)</callback>
+    <callback>set_heater_temperature($heater_temp)</callback>
+    <param>
+        <name>Sample Rate</name>
+        <key>samp_rate</key>
+        <value>10</value>
+        <type>int</type>
+    </param>
+    <param>
+        <name>Fan Speed</name>
+        <key>fan_speed</key>
+        <value>0</value>
+        <type>int</type>
+    </param>
+     <param>
+        <name>Heater Temperature</name>
+        <key>heater_temp</key>
+        <value>0</value>
+        <type>int</type>
+    </param>
+    <check>$samp_rate &gt; 0</check>
+    <check>$samp_rate &lt; 500</check>
+    <check>$fan_speed &gt;= 0</check>
+    <check>$fan_speed &lt;= 251</check>
+    <check>$heater_temp &gt;= 0</check>
+    <check>$heater_temp &lt;= 40</check>
+    <source>
+        <name>out</name>
+        <type>float</type>
+    </source>  
+    <doc>
+Single Board Heater System Source.
+Reads temperature from the sensor for a particular value of Fan Speed and Heater.
+    </doc>  
+</block>
