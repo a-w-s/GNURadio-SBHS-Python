@@ -110,7 +110,7 @@ class sbhs_source(gr.hier_block2, threading.Thread):
 		self._SBHS.write(chr(TEMPERATURE))
 		temp_val = map(ord, self._SBHS.read(2)) #reads in hexadecimal
 		temp_string = str(temp_val[0]) + str(temp_val[1])	
-		arr = numpy.array(float(temp_string), numpy.float32)
+		arr = numpy.array(float(temp_string)/10.0, numpy.float32)
 		print "Temperature Read: %s" %(arr)
 		return gr.message_from_string(arr.tostring(), 0, gr.sizeof_float, 1)
 
