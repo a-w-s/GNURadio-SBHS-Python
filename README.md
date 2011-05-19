@@ -11,7 +11,7 @@ For detailed information visit: http://spoken-tutorial.org/wiki/index.php/GNURad
 Pre-Requisites
 ==============
 
-This package requires that gnuradio-core, python, matplotlib, hal, wxpython, numpy and pylab is already installed.  It also depends on some GNU Radio pre-requisites, such as Boost, Python2.6-dev and Cppunit.
+This package requires that gnuradio-core, python, matplotlib, hal, wxpython, numpy is already installed.  It also depends on some GNU Radio pre-requisites, such as Boost, Python2.6-dev and Cppunit.
 
 For a complete list of Pre-requisites visit: http://gnuradio.org/redmine/wiki/gnuradio/BuildGuide
 
